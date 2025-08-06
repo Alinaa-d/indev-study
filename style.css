@@ -11,6 +11,7 @@
 :root {
     --btn-background: #710707;
     --btn-hover-background: #D2B183;
+    --text-background: #9D8665;
 }
 
 body
@@ -18,10 +19,11 @@ body
     color: #fff;
     margin: 0;
     background-color: black;
+    overflow-x: hidden;
 }
 .no-scroll
 {
-    overflow: hidden;
+    overflow: visible;
 }
 .menu-pics
 {
@@ -39,6 +41,7 @@ body
     align-items: center;
     /*padding: 2% 10%;*/
     padding: 40px 155px;
+    flex-direction: row;
 }
 
 .logo{
@@ -58,30 +61,55 @@ body
 }
 
 .main-nav{
-    position: fixed;
+    /*position: fixed;*/
+    position: absolute;
     z-index: 99;
     width: 100vw;
-    height: 100vh;
-    top: 80px;
-    height: calc(100vh - 80px);
+    height: auto;
+    /*top: 60px;*/
     overflow: visible;
+    padding: 40px;
+    box-sizing: border-box;
 }
 
-.main-nav>ul{
-    list-style:none;
-    display:flex;
-    opacity:60%;
-    font-size: 16px;
+.nav-container>ul{
+    /*list-style:none;*/
+    /*display:flex;*/
+    /*opacity:60%;*/
+    /*font-size: 16px;*/
+    /*letter-spacing: 2px;*/
+    /*font-weight: 200;*/
+    /*gap: 40px;*/
+    padding-left: 755px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+
+.main-nav ul li {
+    margin: 0;
+    list-style-type: none;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    opacity: 60%;
     letter-spacing: 2px;
     font-weight: 200;
-    gap: 40px;
+    display: flex;
 }
 
-.main-nav ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-family: Roboto;
-}
+/*.main-nav ul li a{*/
+/*    color: #fff;*/
+/*    text-decoration: none;*/
+/*    font-family: Roboto;*/
+/*    list-style: none;*/
+/*}*/
 
 .welcome-page
 {
@@ -90,7 +118,7 @@ body
     /*padding-top: 1%;*/
     padding-top: 6px;
     background-color: black;
-    height: 80vh;
+    height: 100vh;
     width: 100vh;
 }
 
@@ -121,6 +149,7 @@ body
 .mobile-br {
     display:none;
 }
+
 .welcome-information h2 {
     font-weight: 300;
     font-family: Roboto;
@@ -231,14 +260,155 @@ body
     display: none;
 }
 
-/*.virtual-tour*/
-/*{*/
-/*    display: flex;*/
-/*    !*padding-top: 1%;*!*/
-/*    background-color: white;*/
-/*    height: 100vh;*/
-/*    width: 100vh;*/
-/*}*/
+.main-nav.show {
+    display: block;
+}
+
+.nav-container{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+/*вторая страница*/
+
+.virtual-tour
+{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+}
+
+.title{
+    font-weight: 400;
+    font-size: 60px;
+    font-family: Forum;
+    letter-spacing: 5px;
+    padding-left: 160px;
+    padding-top: 50px;
+    color: var(--text-background);
+}
+
+.line{
+    border-bottom: 3px solid var(--btn-background);
+    margin-left: 160px;
+    margin-top: 130px;
+    width: 1220px;
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+}
+
+.variants{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 170px;
+    margin-left: 160px;
+    width: 1220px;
+    height: auto;
+}
+
+.variant img{
+    width: 380px;
+    height: auto;
+    display: block;
+}
+
+.top-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-row{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.variant{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.variant-text {
+    padding: 15px 0;
+    color: black;
+}
+
+.main-text {
+    font-family: Forum;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.vr {
+    font-family: Roboto;
+    font-weight: 200;
+    font-size: 22px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
+.description{
+    font-family: Roboto;
+    font-weight: 200;
+    font-size: 18px;
+   padding-top: 7px;
+    margin: 0;
+}
+
+.variant-line{
+    border-bottom: 3px solid var(--btn-background);
+    width: 300px;
+    margin-top: 2px;
+    display: flex;
+    position: absolute;
+}
+
+ /*3 страница*/
+
+.picture-explore
+{
+    background-color: black;
+    height: 135vh;
+    width: 100%;
+}
+
+.title-pic-ex{
+    font-weight: 400;
+    font-size: 60px;
+    font-family: Forum;
+    letter-spacing: 5px;
+    padding-left: 160px;
+    padding-top: 50px;
+    color: white;
+}
+
+.pic-ex-line{
+    border-bottom: 3px solid var(--btn-background);
+    width: 200px;
+    display: flex;
+    position: absolute;
+}
+
+.text-pic-ex{
+    width: 660px;
+    color: white;
+    font-size: 22px;
+    font-family: Roboto;
+    font-weight: 300;
+    padding-left: 160px;
+    gap: 10px;
+}
+
+
 
 @media (min-width: 992px) and (max-width:1024px){
     .main-header {
@@ -299,34 +469,32 @@ body
         transform: translateY(-9px) rotate(-45deg);
     }
 
-    .main-nav>ul {
-        font-size: 22px;
-        position: fixed;
-        padding: 60px 0 0 50px;
-        gap: 1px;
-        height: 100vh;
-        width: 210px;
+    .nav-container{
         background-color: black;
-        display: flex;
-        opacity: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        list-style: none;
-        z-index: 99;
+        height: 100vh;
+        width: 300px;
+    }
+
+
+    .nav-container>ul{
+      flex-direction: column;
+        gap: 5px;
+        margin-left: 20px;
+        padding: 0;
     }
 
     .main-nav {
         display: none;
         margin-left: 0px;
+        top: 100px;
     }
 
-    .main-nav>ul li::after {
+    .main-nav ul li a::after {
         content: ">";
-        position: fixed;
-        left: 200px;
+        position: absolute;
+        left: 190px;
         color: white;
-        font-size: 23px;
+        font-size: 24px;
     }
 
     .show {
@@ -337,11 +505,14 @@ body
         display: none;
     }
 
-    .main-nav ul li {
+    .main-nav ul li a{
         margin: 15px 0;
+        list-style: none;
+        font-size: 24px;
     }
+
     .welcome-page {
-        height: auto;
+        height: 100vh;
         width: 100%;
         padding-top: 5px;
         flex-direction: column;
@@ -385,7 +556,8 @@ body
     }
 
     .swiper-container {
-        width: 80%;
+        width: 70%;
+        height: auto;
         top: 185px;
         left: 335px;
         z-index: 1;
@@ -420,8 +592,47 @@ body
     {
         display: none;
     }
-}
 
+    /*вторая страница*/
+
+    .no-scroll{
+        overflow-x: hidden;
+    }
+
+    .virtual-tour
+    {
+        height: 175vh;
+        width: 113%;
+        margin: 0 auto;
+    }
+
+    .title{
+        font-size: 40px;
+        padding-left: 62px;
+    }
+
+    .line{
+        margin-left: 62px;
+        width: 985px;
+        margin-top: 105px;
+    }
+    .variants{
+        flex-direction: row;
+        margin-left: 130px;
+    }
+    .top-row{
+        flex-direction: column;
+    }
+
+    .bottom-row{
+        flex-direction: column;
+        padding-top: 0px;
+    }
+
+    .variants{
+       gap: 80px;
+    }
+}
 
 @media (min-width: 768px) and (max-width:991px){
     .main-header {
@@ -429,10 +640,7 @@ body
         flex-direction: row;
 
     }
-    .no-scroll
-    {
-        overflow: hidden;
-    }
+
     .logo {
         margin-right: 15px;
         z-index: 100;
@@ -481,40 +689,40 @@ body
     }
 
 
-    .main-nav>ul {
-        position: fixed;
-        padding: 20px 0 0 40px;
-        gap: 1px;
-        width: 100%;
-        height: 100vh;
-        background-color: black;
-        display: flex;
-        opacity: 100%;
+    .nav-container ul {
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        list-style: none;
-        z-index: 99;
+        gap: 1px;
+        margin-left: 45px;
+        padding: 0;
     }
 
     .main-nav {
         display: none;
         margin-left: 0px;
+        top: 90px;
     }
 
     .nav-container{
-
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
     }
-    .main-nav>ul li::after {
+    .main-nav ul li a::after {
         content: ">";
-        position: fixed;
-        left: 155px;
+        position: absolute;
+        left: 162px;
         color: white;
-        font-size: 20px;
+        font-size: 24px;
     }
+
 
     .show {
         display: flex;
+        position: absolute;
+        background: black;
+        overflow: visible;
+        padding: 0;
     }
 
     .menu-pics {
@@ -557,8 +765,12 @@ body
     .main-nav ul li {
         margin: 15px 0;
     }
+
+    .main-nav ul li a{
+       font-size: 22px;
+    }
     .welcome-page {
-        height: auto;
+        height: 100vh;
         width: 100%;
         padding-top: 5px;
         flex-direction: column;
@@ -634,9 +846,89 @@ body
         left:225px;
     }
 
-    .social
+    .social{
+        padding-top: 55px;
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .no-scroll{
+        overflow: visible;
+    }
+
+    .bottom-line{
+        display: flex;
+        margin-left: 38px;
+        margin-top: 760px;
+        width: 687px;
+        z-index: 99;
+        position: absolute;
+        overflow: hidden;
+    }
+
+
+    /*вторая страница*/
+
+    .no-scroll{
+        overflow-x: hidden;
+    }
+
+    .virtual-tour
     {
-        display: none;
+        height: 175vh;
+        width: 113%;
+        margin: 0 auto;
+    }
+
+    .variant img{
+        width: 320px;
+    }
+
+    .title{
+        font-size: 35px;
+        padding-left: 62px;
+    }
+
+    .line{
+        margin-left: 62px;
+        width: 660px;
+        margin-top: 105px;
+    }
+    .variants{
+        flex-direction: row;
+        margin-left: 62px;
+        margin-top: 150px;
+    }
+
+    .main-text {
+        font-size: 23px;
+    }
+
+    .top-row{
+        flex-direction: column;
+    }
+
+    .bottom-row{
+        flex-direction: column;
+        padding-top: 0px;
+    }
+
+    .variants{
+        gap: 20px;
+    }
+
+    .variant-line{
+        width: 220px;
+    }
+
+    .vr {
+        font-size: 20px;
+    }
+
+    .description{
+        font-size: 16px;
     }
 }
 
@@ -645,6 +937,11 @@ body
     .main-header {
         padding: 45px 20px;
         flex-direction: row;
+    }
+
+    .no-scroll
+    {
+        overflow: hidden;
     }
 
     .logo {
@@ -694,32 +991,35 @@ body
         transform: translateY(-9px) rotate(-45deg);
     }
 
-    .main-nav > ul {
-        position: fixed;
-        padding: 60px 0 0 40px;
-        gap: 1px;
-        width: 100%;
-        height: 100vh;
+    .nav-container{
         background-color: black;
+        height: 100vh;
+        width: 100vh;
         display: flex;
-        opacity: 100%;
-        font-size: 22px;
+        margin-left: 0px;
+    }
+
+    .nav-container>ul{
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        list-style: none;
-        z-index: 99;
+        gap: 1px;
+        margin-left: 35px;
+        padding: 0;
     }
 
     .main-nav {
         display: none;
-        margin-left: 0px;
+        top: 80px;
+        overflow: hidden;
     }
 
-    .main-nav > ul li::after {
+    .main-nav>ul li a{
+        list-style: none;
+    }
+
+    .main-nav ul li a::after {
         content: ">";
-        position: fixed;
-        left: 170px;
+        position: absolute;
+        left: 185px;
         color: white;
         font-size: 22px;
     }
@@ -731,7 +1031,7 @@ body
     .menu-pics {
         display: flex;
         position: fixed;
-        padding: 450px 0 0 40px;
+        padding: 370px 0 14px 14px;
         flex-direction: row;
         z-index: 99;
         gap: 15px;
@@ -761,11 +1061,12 @@ body
     }
 
     .main-nav ul li {
-        margin: 15px 0;
+        margin: 25px -22px;
+        margin-top: 5px;
     }
 
     .welcome-page {
-        height: auto;
+        height: 100vh;
         width: 100%;
         padding-top: 5px;
         flex-direction: column;
@@ -823,6 +1124,7 @@ body
 
     .swiper-container {
         width: 80%;
+        height: auto;
         top: 265px;
         left: 45px;
         z-index: 1;
@@ -856,8 +1158,8 @@ body
     .bottom-line {
         display: flex;
         border-bottom: 1px solid white;
-        margin-left: 38px;
-        margin-top: 560px;
+        margin-left: 14px;
+        margin-top: 490px;
         width: 318px;
         z-index: 99;
         position: fixed;
@@ -868,12 +1170,67 @@ body
     {
         display: flex;
         position: fixed;
-        width: 260px;
-        height: 48px;
-        margin-top: 590px;
-        margin-left: 56px;
-        z-index: 99;
+        margin-top: 520px;
+        margin-left: 30px;
         gap: 10px;
+    }
+
+    /*вторая страница*/
+
+    .virtual-tour
+    {
+        height: 270vh;
+        width: 113%;
+        margin: 0 auto;
+    }
+
+    .title{
+        font-size: 28px;
+        padding-left: 15px;
+    }
+
+    .line{
+        margin-left: 15px;
+        width: 385px;
+        margin-top: 90px;
+    }
+    .variants{
+        flex-direction: column;
+        margin-left: 60px;
+    }
+
+    .variant img{
+        width: 300px;
+    }
+
+    .top-row{
+        flex-direction: column;
+    }
+
+    .bottom-row{
+        flex-direction: column;
+        padding-top: 0px;
+    }
+
+    .variants{
+        gap:10px;
+        margin-top: 130px;
+    }
+
+    .main-text {
+        font-size: 18px;
+    }
+
+    .vr {
+        font-size: 16px;
+    }
+
+    .description{
+        font-size: 14px;
+    }
+
+    .variant-line{
+        width: 170px;
     }
 }
 
