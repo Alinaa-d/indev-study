@@ -100,7 +100,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+ document.addEventListener('DOMContentLoaded', function() {
+     document.addEventListener('click', function(e) {
+         if (e.target.classList.contains('increment')) {
+             const input = e.target.previousElementSibling;
+             if (input && input.type === 'number') {
+                 input.value = (parseInt(input.value) || 0) + 1;
+             }
+         }
 
+         if (e.target.classList.contains('decrement')) {
+             const input = e.target.nextElementSibling;
+             if (input && input.type === 'number') {
+                 const value = parseInt(input.value) || 0;
+                 const min = parseInt(input.getAttribute('min')) || 0;
+                 if (value > min) {
+                     input.value = value - 1;
+                 }
+             }
+         }
+     });
+ });
 
 
 
