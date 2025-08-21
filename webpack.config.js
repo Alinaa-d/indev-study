@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const miniCss = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './src/script.js',
@@ -12,14 +12,15 @@ module.exports = {
     },
     resolve: {
         alias: {
-            pics: path.resolve(__dirname, 'public/pics')
+            pics: path.resolve(__dirname, 'public/pics'),
+            fonts: path.resolve(__dirname, 'public/fonts')
         }
     },
     module: {
         rules: [
             {
                 test: /\.(scss|sass|css)$/i,
-                use: [ miniCss.loader,
+                use: [ MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader'],
             },
@@ -32,7 +33,6 @@ module.exports = {
                             { tag: 'img', attribute: 'src', type: 'src' },
                             { tag: 'img', attribute: 'srcset', type: 'srcset' },
                             { tag: 'source', attribute: 'srcset', type: 'srcset' },
-
                             { tag: 'img', attribute: 'data-src', type: 'src' },
                         ],
                         urlFilter: (attribute, value, resourcePath) => {
@@ -53,7 +53,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html',
         }),
-        new miniCss({
+        new MiniCssExtractPlugin({
             filename: 'style.css',
         }),
         new CopyWebpackPlugin({
@@ -63,6 +63,11 @@ module.exports = {
                     to: 'pics',
                     noErrorOnMissing: true
                 },
+                {
+                    from: 'public/fonts',
+                    to: 'fonts',
+                    noErrorOnMissing: true
+                }
             ],
         }),
     ],
