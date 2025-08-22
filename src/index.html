@@ -1,373 +1,480 @@
-<!DOCTYPE html>
-<html lang = "ru">
-<head>
-    <meta charset="UTF-8"/>
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
     <title>Museum</title>
-</head>
-<body>
-<nav class = "main-nav">
-    <div class = "nav-container">
+  </head>
+  <body>
+    <nav class="main-nav">
+      <div class="nav-container">
         <ul>
-            <li><a href="#">Visiting</a></li>
-            <li><a href="#">Explore</a></li>
-            <li><a href="#">Video</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Tickets</a></li>
-            <li><a href="#">Contacts</a></li>
+          <li><a href="#">Visiting</a></li>
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">Video</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Tickets</a></li>
+          <li><a href="#">Contacts</a></li>
         </ul>
 
         <div class="menu-pics">
-            <img src="pics/TopPicture.webp" alt="Top picture" class = "top-pic">
-            <div class="bottom-pics">
-                <img src="pics/FirstBottomPicture.webp" alt="Bottom picture" class = "bottom-pic">
-                <img src="pics/SecondBottomPicture.webp" alt="Bottom Picture" class = "bottom-pic">
-            </div>
+          <img src="images/TopPicture.webp" alt="Top picture" class="top-pic" />
+          <div class="bottom-pics">
+            <img src="images/FirstBottomPicture.webp" alt="Bottom picture" class="bottom-pic" />
+            <img src="images/SecondBottomPicture.webp" alt="Bottom Picture" class="bottom-pic" />
+          </div>
         </div>
 
-        <hr class="bottom-line">
+        <hr class="bottom-line" />
 
         <div class="social">
-            <img src="pics/Youtube.webp" alt="Youtube">
-            <img src="pics/Instagram.webp" alt="IG">
-            <img src="pics/Facebook.webp" alt="Facebook">
-            <img src="pics/Twitter.webp" alt="Twitter">
-            <img src="pics/Pinterest.webp" alt="Pinterest">
+          <img src="images/Youtube.webp" alt="Youtube" />
+          <img src="images/Instagram.webp" alt="IG" />
+          <img src="images/Facebook.webp" alt="Facebook" />
+          <img src="images/Twitter.webp" alt="Twitter" />
+          <img src="images/Pinterest.webp" alt="Pinterest" />
         </div>
-    </div>
-</nav>
-<header class = "main-header">
-    <div class = "logo">
-        <img src="pics/logo.webp" alt="logo">
-        <div class = "logo-name">
-            LOUVRE
+      </div>
+    </nav>
+    <header class="main-header">
+      <div class="logo">
+        <img src="images/logo.webp" alt="logo" />
+        <div class="logo-name">LOUVRE</div>
+      </div>
+      <div class="burger-menu">
+        <div class="burger-icon">
+          <span class="burger-line top"></span>
+          <span class="burger-line middle"></span>
+          <span class="burger-line bottom"></span>
         </div>
-    </div>
-    <div class = "burger-menu">
-        <div class = "burger-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-</header>
+      </div>
+    </header>
 
-<div class="Museum">
-    <div class = "welcome-page">
-        <div class = "welcome-information">
-            <h1>WELCOME <br>TO THE LOUVRE</h1>
-            <h2>From the castle to the museum</h2>
-            <button class = "discover-btn">Discover the Louvre</button>
+    <div class="Museum">
+      <section class="welcome-page">
+        <div class="welcome-information">
+          <h1>WELCOME <br />TO THE LOUVRE</h1>
+          <h2>From the castle to the museum</h2>
+          <button class="discover-btn">Discover the Louvre</button>
         </div>
         <div class="swiper-container">
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="pics/MonaLisa.webp" alt="Mona Lisa" class="card-img">
-                        <div class="gradient-overlay"></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="pics/RoyalPalace.webp" alt="Royal Palace" class="card-img">
-                        <div class="gradient-overlay"></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="pics/NightPalace.webp" alt="Night Palace" class="card-img">
-                        <div class="gradient-overlay"></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="pics/DenonWing.webp" alt="Denon Wing" class="card-img">
-                        <div class="gradient-overlay"></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="pics/ColonnadeTerrault.webp" alt="Colonnade Terrault" class="card-img">
-                        <div class="gradient-overlay"></div>
-                    </div>
-
-                </div>
-                <div class="swiper-controls">
-                    <div class="swiper-pagination">01 | 05</div>
-                    <div class="swiper-carousel">
-                        <div class="swiper-carousel-dot active"></div>
-                        <div class="swiper-carousel-dot"></div>
-                        <div class="swiper-carousel-dot"></div>
-                        <div class="swiper-carousel-dot"></div>
-                        <div class="swiper-carousel-dot"></div>
-                    </div>
-                    <div class="swiper-navigation">
-                        <div class="swiper-button-prev"><img src="pics/arrow.webp" alt="arrow"></div>
-                        <div class="swiper-button-next"><img src="pics/arrow.webp" style="transform: scaleX(-1);" alt="arrow"></div>
-                    </div>
-                </div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/MonaLisa.webp" alt="Mona Lisa" class="card-img" />
+                <div class="gradient-overlay"></div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/RoyalPalace.webp" alt="Royal Palace" class="card-img" />
+                <div class="gradient-overlay"></div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/NightPalace.webp" alt="Night Palace" class="card-img" />
+                <div class="gradient-overlay"></div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/DenonWing.webp" alt="Denon Wing" class="card-img" />
+                <div class="gradient-overlay"></div>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="images/ColonnadeTerrault.webp"
+                  alt="Colonnade Terrault"
+                  class="card-img"
+                />
+                <div class="gradient-overlay"></div>
+              </div>
             </div>
+            <div class="swiper-controls">
+              <div class="swiper-carousel">
+                <div class="swiper-carousel-dot active"></div>
+                <div class="swiper-carousel-dot"></div>
+                <div class="swiper-carousel-dot"></div>
+                <div class="swiper-carousel-dot"></div>
+                <div class="swiper-carousel-dot"></div>
+              </div>
+              <div class="swiper-navigation">
+                <div class="swiper-button-prev"><img src="images/arrow.webp" alt="arrow" /></div>
+                <div class="swiper-button-next">
+                  <img src="images/arrow.webp" style="transform: scaleX(-1)" alt="arrow" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </section>
 
-    <!--2 блок-->
-    <div class="virtual-tour">
+      <!--2 блок-->
+      <section class="virtual-tour">
         <div class="title">VIRTUAL TOUR</div>
-        <hr class="line">
+        <hr class="line" />
         <div class="variants">
-            <div class="variant">
-                <img src="pics/RoyalPalace.webp" alt="Royal Palace">
-                <div class="variant-text">
-                    <div class="main-text">ROYAL PALACE</div>
-                    <hr class="variant-line">
-                    <p class="vr">360° Virtual Tour</p>
-                    <p class="description">Google Street Panorama View</p>
-                </div>
+          <div class="variant">
+            <img src="images/RoyalPalace.webp" alt="Royal Palace" />
+            <div class="variant-text">
+              <div class="main-text">ROYAL PALACE</div>
+              <hr class="variant-line" />
+              <p class="vr">360° Virtual Tour</p>
+              <p class="description">Google Street Panorama View</p>
             </div>
-            <div class="variant">
-                <img src="pics/DenonWing.webp" alt="Denon Wing">
-                <div class="variant-text">
-                    <div class="main-text">DENON WING</div>
-                    <hr class="variant-line">
-                    <p class="vr">360° Virtual Tour</p>
-                    <p class="description">Google Street Panorama View</p>
-                </div>
+          </div>
+          <div class="variant">
+            <img src="images/DenonWing.webp" alt="Denon Wing" />
+            <div class="variant-text">
+              <div class="main-text">DENON WING</div>
+              <hr class="variant-line" />
+              <p class="vr">360° Virtual Tour</p>
+              <p class="description">Google Street Panorama View</p>
             </div>
-            <div class="variant">
-                <img src="pics/GreekHall.webp" alt="Greek Hall">
-                <div class="variant-text">
-                    <div class="main-text">GREEK HALL</div>
-                    <hr class="variant-line">
-                    <p class="vr">360° Virtual Tour</p>
-                    <p class="description">Google Street Panorama View</p>
-                </div>
+          </div>
+          <div class="variant">
+            <img src="images/GreekHall.webp" alt="Greek Hall" />
+            <div class="variant-text">
+              <div class="main-text">GREEK HALL</div>
+              <hr class="variant-line" />
+              <p class="vr">360° Virtual Tour</p>
+              <p class="description">Google Street Panorama View</p>
             </div>
-            <div class="variant">
-                <img src="pics/MonaLisa2.webp" alt="Mona Lisa">
-                <div class="variant-text">
-                    <div class="main-text">MONA LISA</div>
-                    <hr class="variant-line">
-                    <p class="vr">360° Virtual Tour</p>
-                    <p class="description">Google Street Panorama View</p>
-                </div>
+          </div>
+          <div class="variant">
+            <img src="images/MonaLisa2.webp" alt="Mona Lisa" />
+            <div class="variant-text">
+              <div class="main-text">MONA LISA</div>
+              <hr class="variant-line" />
+              <p class="vr">360° Virtual Tour</p>
+              <p class="description">Google Street Panorama View</p>
             </div>
-            <div class="variant">
-                <img src="pics/ColonnadeTerrault.webp" alt="Colonnade Perrault">
-                <div class="variant-text">
-                    <div class="main-text">COLONNADE PERRAULT</div>
-                    <hr class="variant-line">
-                    <p class="vr">360° Virtual Tour</p>
-                    <p class="description">Google Street Panorama View</p>
-                </div>
+          </div>
+          <div class="variant">
+            <img src="images/ColonnadeTerrault.webp" alt="Colonnade Perrault" />
+            <div class="variant-text">
+              <div class="main-text">COLONNADE PERRAULT</div>
+              <hr class="variant-line" />
+              <p class="vr">360° Virtual Tour</p>
+              <p class="description">Google Street Panorama View</p>
             </div>
-            <div class="variant">
-                <img src="pics/NightPalace.webp" alt="Night Palace">
-                <div class="variant-text">
-                    <div class="main-text">NIGHT PALACE</div>
-                    <hr class="variant-line">
-                    <p class="vr">360° Virtual Tour</p>
-                    <p class="description">Google Street Panorama View</p>
-                </div>
+          </div>
+          <div class="variant">
+            <img src="images/NightPalace.webp" alt="Night Palace" />
+            <div class="variant-text">
+              <div class="main-text">NIGHT PALACE</div>
+              <hr class="variant-line" />
+              <p class="vr">360° Virtual Tour</p>
+              <p class="description">Google Street Panorama View</p>
             </div>
+          </div>
         </div>
-    </div>
+      </section>
 
-<!--3 блок-->
-<div class="picture-explore">
-    <div class="content-wrapper">
-        <div class="text-container">
+      <!--3 блок-->
+      <section class="picture-explore">
+        <div class="content-wrapper">
+          <div class="text-container">
             <div class="title-pic-ex">PICTURE EXPLORE</div>
-            <hr class="pic-ex-line">
+            <hr class="pic-ex-line" />
             <div class="text-pic-ex">
-                <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
-                <p>It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
-                <p>The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
+              <p>
+                Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish
+                Golden Age.<br />
+                It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had
+                gathered since the previous restoration in the 19th century.<br />
+                The cleaning provoked furious protests, not because the picture had been damaged in
+                any way, but because it looked different.
+              </p>
             </div>
-        </div>
+          </div>
 
-        <div class="slider-container">
-            <img src="pics/ColoredPic.webp" alt="Original Image" class="pic-img original-img">
+          <div class="slider-container">
+            <img src="images/ColoredPic.webp" alt="Original Image" class="pic-img original-img" />
             <div class="blue-filter"></div>
-            <input type="range" id="slider" min="0" max="100" value="0" class="slider">
+            <input type="range" id="slider" min="0" max="100" value="0" class="slider" />
+          </div>
         </div>
-    </div>
-</div>
+      </section>
 
-    <!--4 блок-->
-    <div class="video-journey">
+      <!--4 блок-->
+      <section class="video-journey">
         <div class="text-wrapper">
-            <div class="title-vid-jour">VIDEO JOURNEY</div>
-            <div class="text-vid-jour">
-                <p>Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code</p>
-            </div>
+          <div class="title-vid-jour">VIDEO JOURNEY</div>
+          <div class="text-vid-jour">
+            <p>
+              Enter and visit one of the most famous museums in the world and enjoy masterpieces
+              such as Mona Lisa or Hammurabi's Code
+            </p>
+          </div>
         </div>
 
         <div class="video-container">
+          <div class="thumb-wrap">
+            <iframe
+              width="928"
+              height="522"
+              src="https://www.youtube.com/embed/dHViKO9DrDA"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
 
-            <div class="thumb-wrap">
-                <iframe width="928" height="522" src="https://www.youtube.com/embed/dHViKO9DrDA" frameborder="0" allowfullscreen></iframe>
-            </div>
-
-            <div class="thumbnails-container">
-
+          <div class="thumbnails-container">
             <div class="thumbnails-slider">
-                <div class="thumbnail">
-                    <iframe width="928" height="522" src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="Exposition - Le Corps et l&#39;Âme. De Donatello à Michel-Ange. Sculptures italiennes de la Renaissance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail">
-                    <iframe width="928" height="522" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="Au Louvre ! La Vénus de Milo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail">
-                    <iframe width="928" height="522" src="https://www.youtube.com/embed/NOhDysLnTvY" title="Promenade dans les collections mésopotamiennes avec Ariane Thomas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
+              <div class="thumbnail">
+                <iframe
+                  width="928"
+                  height="522"
+                  src="https://www.youtube.com/embed/aWmJ5DgyWPI"
+                  title="Exposition - Le Corps et l&#39;Âme. De Donatello à Michel-Ange. Sculptures italiennes de la Renaissance"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="thumbnail">
+                <iframe
+                  width="928"
+                  height="522"
+                  src="https://www.youtube.com/embed/Vi5D6FKhRmo"
+                  title="Au Louvre ! La Vénus de Milo"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="thumbnail">
+                <iframe
+                  width="928"
+                  height="522"
+                  src="https://www.youtube.com/embed/NOhDysLnTvY"
+                  title="Promenade dans les collections mésopotamiennes avec Ariane Thomas"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
 
-                <div class="thumbnail">
-                    <iframe width="928" height="522" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="Welcome to the Louvre - Bienvenue au Louvre - Musée du Louvre" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail">
-                    <iframe width="928" height="522" src="https://www.youtube.com/embed/O7JuQKvN2JU" title="La restauration de l&#39;Arc du Carrousel - Épisode 3  [ENG subtitles]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail">
-                    <iframe width="928" height="522" src="https://www.youtube.com/embed/_xkCYkxeV_g" title="Visite de l&#39;exposition « Le Corps et l&#39;Âme » au Louvre [English subtitles]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="thumbnail">
-                    <iframe width="928" height="522" src="https://www.youtube.com/embed/YXX1DW19Tz4" title="Au Louvre ! Sainte Marie-Madeleine" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
+              <div class="thumbnail">
+                <iframe
+                  width="928"
+                  height="522"
+                  src="https://www.youtube.com/embed/zp1BXPX8jcU"
+                  title="Welcome to the Louvre - Bienvenue au Louvre - Musée du Louvre"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="thumbnail">
+                <iframe
+                  width="928"
+                  height="522"
+                  src="https://www.youtube.com/embed/O7JuQKvN2JU"
+                  title="La restauration de l&#39;Arc du Carrousel - Épisode 3  [ENG subtitles]"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="thumbnail">
+                <iframe
+                  width="928"
+                  height="522"
+                  src="https://www.youtube.com/embed/_xkCYkxeV_g"
+                  title="Visite de l&#39;exposition « Le Corps et l&#39;Âme » au Louvre [English subtitles]"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="thumbnail">
+                <iframe
+                  width="928"
+                  height="522"
+                  src="https://www.youtube.com/embed/YXX1DW19Tz4"
+                  title="Au Louvre ! Sainte Marie-Madeleine"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
             </div>
 
-                <div class="slider-controls">
+            <div class="slider-controls">
+              <button class="slider-arrow prev-arrow"><<</button>
 
-                    <button class="slider-arrow prev-arrow"><<</button>
+              <div class="slider-carousel">
+                <div class="slider-carousel-dot active"></div>
+                <div class="slider-carousel-dot"></div>
+                <div class="slider-carousel-dot"></div>
+                <div class="slider-carousel-dot"></div>
+                <div class="slider-carousel-dot"></div>
+              </div>
 
-                    <div class="slider-carousel">
-                        <div class="slider-carousel-dot active"></div>
-                        <div class="slider-carousel-dot"></div>
-                        <div class="slider-carousel-dot"></div>
-                        <div class="slider-carousel-dot"></div>
-                        <div class="slider-carousel-dot"></div>
-                    </div>
-
-                    <button class="slider-arrow next-arrow">>></button>
-                </div>
+              <button class="slider-arrow next-arrow">>></button>
             </div>
+          </div>
         </div>
+      </section>
 
-    </div>
-
-<!--    5 блок-->
-    <div class="art-gallery">
+      <!--    5 блок-->
+      <section class="art-gallery">
         <div class="title-art-gal">ART GALLERY</div>
 
         <div class="art-gal-images">
-            <div class="images1-block">
-                <div class="art-gal-image">
-                    <img src="pics/LaDianeDeVersailles.webp" alt="La Diane de Versailles.png" class="image-gal">
-                </div>
-                <div class="art-gal-image">
-                    <img src="pics/LeVenusDeMilo.webp" alt="Le Venus de Milo" class="image-gal">
-                </div>
-                <div class="art-gal-image">
-                    <img src="pics/LaVictoireDeSamothrace.webp" alt="La Victoire de Samothrace" class="image-gal">
-                </div>
-                <div class="art-gal-image">
-                    <img src="pics/VirginAndChildWithStAnne.webp" alt="Virgin and Child with St Anne.png" class="image-gal">
-                </div>
+          <div class="images1-block">
+            <div class="art-gal-image">
+              <img
+                src="images/LaDianeDeVersailles.webp"
+                alt="La Diane de Versailles.png"
+                class="image-gal"
+              />
             </div>
+            <div class="art-gal-image">
+              <img src="images/LeVenusDeMilo.webp" alt="Le Venus de Milo" class="image-gal" />
+            </div>
+            <div class="art-gal-image">
+              <img
+                src="images/LaVictoireDeSamothrace.webp"
+                alt="La Victoire de Samothrace"
+                class="image-gal"
+              />
+            </div>
+            <div class="art-gal-image">
+              <img
+                src="images/VirginAndChildWithStAnne.webp"
+                alt="Virgin and Child with St Anne.png"
+                class="image-gal"
+              />
+            </div>
+          </div>
 
-            <div class="images2-block">
-                <div class="art-gal-image">
-                    <img src="pics/CupidAndPsyche.webp" alt="Cupid and Psyche" class="image-gal">
-                </div>
-                <div class="art-gal-image">
-                    <img src="pics/GrandPalais.webp" alt="Grand Palais" class="image-gal">
-                </div>
-                <div class="art-gal-image">
-                    <img src="pics/SchiavoMorente.webp" alt="Schiavo morente" class="image-gal">
-                </div>
-                <div class="art-gal-image">
-                    <img src="pics/VenusDeMilo.webp" alt="Venus de Milo" class="image-gal">
-                </div>
+          <div class="images2-block">
+            <div class="art-gal-image">
+              <img src="images/CupidAndPsyche.webp" alt="Cupid and Psyche" class="image-gal" />
             </div>
+            <div class="art-gal-image">
+              <img src="images/GrandPalais.webp" alt="Grand Palais" class="image-gal" />
+            </div>
+            <div class="art-gal-image">
+              <img src="images/SchiavoMorente.webp" alt="Schiavo morente" class="image-gal" />
+            </div>
+            <div class="art-gal-image">
+              <img src="images/VenusDeMilo.webp" alt="Venus de Milo" class="image-gal" />
+            </div>
+          </div>
 
-            <div class="images3-block">
-                <div class="art-gal-image">
-                    <img src="pics/MonaLisa3.webp" alt="Mona Lisa" class="image-gal">
-                </div>
-                <div class="art-gal-image">
-                    <img src="pics/DepartementDesArts.webp" alt="Departement des Arts" class="image-gal">
-                </div>
-                <div class="art-gal-image">
-                    <img src="pics/LouvrePyramid.webp" alt="Louvre Pyramid" class="image-gal">
-                </div>
-                <div class="art-gal-image">
-                    <img src="pics/InteriorLouvre.webp" alt="Interior Louvre" class="image-gal">
-                </div>
+          <div class="images3-block">
+            <div class="art-gal-image">
+              <img src="images/MonaLisa3.webp" alt="Mona Lisa" class="image-gal" />
             </div>
+            <div class="art-gal-image">
+              <img
+                src="images/DepartementDesArts.webp"
+                alt="Departement des Arts"
+                class="image-gal"
+              />
+            </div>
+            <div class="art-gal-image">
+              <img src="images/LouvrePyramid.webp" alt="Louvre Pyramid" class="image-gal" />
+            </div>
+            <div class="art-gal-image">
+              <img src="images/InteriorLouvre.webp" alt="Interior Louvre" class="image-gal" />
+            </div>
+          </div>
         </div>
-    </div>
+      </section>
 
-<!--6 блок-->
-    <div class="buy-tickets">
+      <!--6 блок-->
+      <section class="buy-tickets">
         <div class="title-buy-tickets">BUY TICKETS</div>
-        <hr class="buy-tickets-line">
+        <hr class="buy-tickets-line" />
 
         <div class="main-block">
-            <div class="image-bt">
-                <img src="pics/tickets.webp" alt="Buy tickets" class="image-tic">
+          <div class="image-bt">
+            <img src="images/tickets.webp" alt="Buy tickets" class="image-tic" />
+          </div>
+          <form class="form-block">
+            <div class="ticket-type">
+              <div class="name-tt">Ticket Type</div>
+
+              <div class="ticket-option-block">
+                <div class="ticket-option">
+                  <input type="radio" id="permanent" name="ticket_type" value="permanent" checked />
+                  <label for="permanent">Permanent exhibition</label>
+                </div>
+
+                <div class="ticket-option">
+                  <input type="radio" id="temporary" name="ticket_type" value="temporary" />
+                  <label for="temporary">Temporary exhibition</label>
+                </div>
+
+                <div class="ticket-option">
+                  <input
+                    type="radio"
+                    id="combined admission"
+                    name="ticket_type"
+                    value="combined admission"
+                  />
+                  <label for="combined admission">Combined Admission</label>
+                </div>
+              </div>
             </div>
-            <form class="form-block">
-                <div class="ticket-type">
-                    <div class="name-tt">Ticket Type</div>
+            <div class="amount">
+              <div class="name-a">Amount</div>
 
-                    <div class="ticket-option-block">
-                    <div class="ticket-option">
-                        <input type="radio" id="permanent" name="ticket_type" value="permanent" checked>
-                        <label for="permanent">Permanent exhibition</label>
-                    </div>
-
-                    <div class="ticket-option">
-                        <input type="radio" id="temporary" name="ticket_type" value="temporary">
-                        <label for="temporary">Temporary exhibition</label>
-                    </div>
-
-                    <div class="ticket-option">
-                        <input type="radio" id="combined admission" name="ticket_type" value="combined admission">
-                        <label for="combined admission">Combined Admission</label>
-                    </div>
-                    </div>
-
+              <div class="amount-control-block">
+                <div class="amount-control">
+                  <label class="label-a" for="basic">Basic 18+</label>
+                  <div class="control">
+                    <button type="button" class="decrement">-</button>
+                    <input
+                      class="input-control"
+                      type="number"
+                      id="basic"
+                      name="senior_tickets"
+                      min="0"
+                      value="1"
+                      readonly
+                    />
+                    <button type="button" class="increment">+</button>
+                  </div>
                 </div>
-                <div class="amount">
-                    <div class="name-a">Amount</div>
 
-                    <div class="amount-control-block">
-
-                        <div class="amount-control">
-                            <label class="label-a" for="basic">Basic 18+</label>
-                            <div class="control">
-                                <button type="button" class="decrement">-</button>
-                                <input class="input-control" type="number" id="basic" name="senior_tickets" min="0" value="1" readonly>
-                                <button type="button" class="increment">+</button>
-                            </div>
-                        </div>
-
-                        <div class="amount-control">
-                            <label class="label-a" for="senior">Senior 65+</label>
-                            <div class="control">
-                                <button type="button" class="decrement">-</button>
-                                <input class="input-control" type="number" id="senior" name="senior_tickets" min="0" value="1" readonly>
-                                <button type="button" class="increment">+</button>
-                            </div>
-                        </div>
-
-                        <div class="total-section" id="total-display">
-                            Total €220
-                        </div>
-
-                        <div class="buy-now-block">
-                            <button type="button" class="buy-now">Buy now</button>
-                        </div>
-                    </div>
+                <div class="amount-control">
+                  <label class="label-a" for="senior">Senior 65+</label>
+                  <div class="control">
+                    <button type="button" class="decrement">-</button>
+                    <input
+                      class="input-control"
+                      type="number"
+                      id="senior"
+                      name="senior_tickets"
+                      min="0"
+                      value="1"
+                      readonly
+                    />
+                    <button type="button" class="increment">+</button>
+                  </div>
                 </div>
-            </form>
+
+                <div class="total-section" id="total-display">Total €220</div>
+
+                <div class="buy-now-block">
+                  <button type="button" class="buy-now">Buy now</button>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
+      </section>
     </div>
-</div>
-
-</body>
+  </body>
 </html>
