@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./script.js"></script>
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <title>Museum</title>
   </head>
   <body>
@@ -89,6 +88,7 @@
               </div>
             </div>
             <div class="swiper-controls">
+              <div class="swiper-pagination">01 | 05</div>
               <div class="swiper-carousel">
                 <div class="swiper-carousel-dot active"></div>
                 <div class="swiper-carousel-dot"></div>
@@ -98,9 +98,7 @@
               </div>
               <div class="swiper-navigation">
                 <div class="swiper-button-prev"><img src="images/arrow.webp" alt="arrow" /></div>
-                <div class="swiper-button-next">
-                  <img src="images/arrow.webp" style="transform: scaleX(-1)" alt="arrow" />
-                </div>
+                <div class="swiper-button-next"><img src="images/arrow.webp" alt="arrow" /></div>
               </div>
             </div>
           </div>
@@ -197,6 +195,7 @@
 
       <!--4 блок-->
       <section class="video-journey">
+        <div class="video-wrapper">
         <div class="text-wrapper">
           <div class="title-vid-jour">VIDEO JOURNEY</div>
           <div class="text-vid-jour">
@@ -322,6 +321,7 @@
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       <!--    5 блок-->
@@ -329,7 +329,7 @@
         <div class="title-art-gal">ART GALLERY</div>
 
         <div class="art-gal-images">
-          <div class="images1-block">
+          <div class="left-block">
             <div class="art-gal-image">
               <img
                 src="images/LaDianeDeVersailles.webp"
@@ -356,7 +356,7 @@
             </div>
           </div>
 
-          <div class="images2-block">
+          <div class="center-block">
             <div class="art-gal-image">
               <img src="images/CupidAndPsyche.webp" alt="Cupid and Psyche" class="image-gal" />
             </div>
@@ -371,7 +371,7 @@
             </div>
           </div>
 
-          <div class="images3-block">
+          <div class="right-block">
             <div class="art-gal-image">
               <img src="images/MonaLisa3.webp" alt="Mona Lisa" class="image-gal" />
             </div>
@@ -403,7 +403,7 @@
           </div>
           <form class="form-block">
             <div class="ticket-type">
-              <div class="name-tt">Ticket Type</div>
+              <div class="title-ticket-type">Ticket Type</div>
 
               <div class="ticket-option-block">
                 <div class="ticket-option">
@@ -428,7 +428,7 @@
               </div>
             </div>
             <div class="amount">
-              <div class="name-a">Amount</div>
+              <div class="title-amount">Amount</div>
 
               <div class="amount-control-block">
                 <div class="amount-control">
@@ -476,5 +476,8 @@
         </div>
       </section>
     </div>
+
+    <script src="./script.js"></script>
+
   </body>
 </html>
