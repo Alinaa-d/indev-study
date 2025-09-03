@@ -117,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     }
-
     updateVisibleThumbnails();
   }
 
@@ -139,5 +138,54 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     }
+  });
+
+  function calculateAndDisplayTotal() {
+    const basicCount = parseInt(document.getElementById('basic').value) || 0;
+    const seniorCount = parseInt(document.getElementById('senior').value) || 0;
+
+    const basicPrice = 20;
+    const seniorPrice = 10;
+
+    const basicTotal = basicCount * basicPrice;
+    const seniorTotal = seniorCount * seniorPrice;
+    const overallTotal = basicTotal + seniorTotal;
+
+    document.getElementById('total-display').textContent = `Total €${overallTotal}`;
+
+    return {
+      basicTotal,
+      seniorTotal,
+      overallTotal,
+    };
+  }
+
+  document.querySelectorAll('.increment, .decrement').forEach((button) => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      setTimeout(calculateAndDisplayTotal, 10);
+    });
+  });
+
+  calculateAndDisplayTotal();
+
+  function goToBooking() {
+    const basicTickets = document.getElementById('basic').value;
+    const seniorTickets = document.getElementById('senior').value;
+
+    const prices = calculateAndDisplayTotal();
+
+    localStorage.setItem('basicTickets', basicTickets);
+    localStorage.setItem('seniorTickets', seniorTickets);
+    localStorage.setItem('basicTotal', prices.basicTotal.toString());
+    localStorage.setItem('seniorTotal', prices.seniorTotal.toString());
+    localStorage.setItem('overallTotal', prices.overallTotal.toString());
+
+    window.location.href = 'booking.html';
+  }
+
+  document.querySelector('.buy-now').addEventListener('click', function (e) {
+    e.preventDefault();
+    goToBooking();
   });
 });

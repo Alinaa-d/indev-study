@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="booking.scss" />
+    <title>Booking tickets</title>
+</head>
+<body>
+    <section class="booking-tickets">
+        <div class="exit">
+            <a href="index.html">
+            <img src="images/exit.webp" alt="exit" />
+            </a>
+        </div>
+        <div class="booking-wrapper">
+            <div class="booking-block1">
+                <div class="booking-title-block">
+                    <div class="logo">
+                        <img src="images/booking-logo.webp" alt="logo" />
+                    </div>
+                    <div class="booking-title">BOOKING TICKETS</div>
+                    <div class="description-title">Tour to Louvre</div>
+                    <hr class="booking-line"/>
+                </div>
+                <form class="personal-data-block">
+                    <div class="date-block">
+                        <div class="date-container">
+                            <input type="date" id="date-input">
+                            <img class="date-icon" for="date-input" src="images/date-icon.webp" alt="icon" />
+                            <img class="date-arrow" for="date-input" src="images/drop-down-arrow.webp" alt="icon" />
+                        </div>
+                        <div class="time-container">
+                            <input type="time" id="time-input">
+                            <img class="date-icon"for="time-input" src="images/time-icon.webp" alt="icon" />
+                            <img class="date-arrow" for="date-input" src="images/drop-down-arrow.webp" alt="icon" />
+                        </div>
+                    </div>
+                    <div class="name-input-container">
+                        <input type="text" id="name-input" placeholder="Name">
+                        <img for="name-input" src="images/name-icon.webp" alt="icon" />
+                    </div>
+                    <div class="email-input-container">
+                        <input type="email" id="email-input" placeholder="E-mail">
+                        <img for="email-input" src="images/email-icon.webp" alt="icon" />
+                    </div>
+                    <div class="phone-input-container">
+                        <input type="tel" id="phone-input" placeholder="Phone">
+                        <img for="phone-input" src="images/phone-icon.webp" alt="icon" />
+                    </div>
+                    <div class="ticket-type-container">
+                        <select id="ticket-type" class="ticket-type-select">
+                            <option value="petersburg">Permanent exhibition</option>
+                            <option value="samara">Temporary exhibition</option>
+                            <option value="perm">Combined Admission</option>
+                        </select>
+                        <img for="ticket-type" src="images/ticket-type-icon.webp" alt="icon" />
+                    </div>
+                </form>
+
+                <div class="entry-ticket-block">
+                    <div class="title-entry-ticket">Entry ticket</div>
+                    <hr class="entry-ticket-line"/>
+
+                    <div class="amount-control-booking">
+                        <label class="label-booking" for="basic">Basic 18+ (20 €)</label>
+                        <div class="control-booking">
+                            <button type="button" class="decrement-booking">-</button>
+                            <input
+                                    class="input-control-booking"
+                                    type="number"
+                                    id="basic"
+                                    name="basic_tickets"
+                                    min="0"
+                                    value="1"
+                                    readonly
+                            />
+                            <button type="button" class="increment-booking">+</button>
+                        </div>
+                    </div>
+
+                    <div class="amount-control-booking">
+                        <label class="label-booking" for="senior">Senior 65+ (10 €)</label>
+                        <div class="control-booking">
+                            <button type="button" class="decrement-booking">-</button>
+                            <input
+                                    class="input-control-booking"
+                                    type="number"
+                                    id="senior"
+                                    name="senior_tickets"
+                                    min="0"
+                                    value="1"
+                                    readonly
+                            />
+                            <button type="button" class="increment-booking">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="booking-block2">
+                <div class="overview-block">
+                    <div class="overview-content">
+                        <div class="overview-content-block1">
+                            <div class="overview-text-content">
+                                <div class="overview-title">Overview</div>
+                                <div class="description-overview-title">Tour to Louvre</div>
+                                <div class="selected-date-block">
+                                    <img src="images/date-icon.webp" alt="icon" />
+                                    <label id="select-date"></label>
+                                </div>
+                                <div class="selected-time">
+                                    <img src="images/time-icon.webp" alt="icon" />
+                                    <label id="select-time"></label>
+                                </div>
+                                <div class="selected-ticket-type">
+                                    <img src="images/selected-ticket-type.webp" alt="icon" />
+                                    <label id="select-ticket-type"></label>
+                                </div>
+                            </div>
+                            <div class="overview-img-content">
+                                <img src="images/louvre-booking.webp" alt="louvre" />
+                            </div>
+                        </div>
+                        <div class="overview-content-block2">
+                            <div class="basic-ticket">
+                                <label id="count-basic"></label>
+                                <label class="label-basic">Basic (20 €)</label>
+                                <label class="cost-basic"></label>
+                            </div>
+                            <div class="senior-ticket">
+                                <label id="count-senior"></label>
+                                <label class="label-senior">Senior (10 €)</label>
+                                <lable class="cost-senior"></lable>
+                            </div>
+                            <hr class="overview-line"/>
+                            <div class="total-cost-tickets">
+                                <label class="label-total">Total:</label>
+                                <lable class="total-cost"></lable>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="back-card-container">
+                                <div class="back-part">
+                                    <div class="black-part"></div>
+                                    <div class="cvc-cvv-block">
+                                        <div class="cvc-cvv">
+                                            <label for="cvc-input">CVC/CVV</label>
+                                            <input type="text" id="cvc-input" maxlength="4" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                                            <div class="description-text">
+                                                <label class="cvc-description" for="cvc-input">The last
+                                                    3 or 4 digits
+                                                    on back
+                                                    of the card</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="front-card-container">
+                                <form class="front-part">
+
+                                    <div class="top-container">
+                                        <div class="data-block">
+                                            <div class="card-number">
+                                                <label for="card-number-input">Card number</label>
+                                                <input type="text" id="card-number-input" maxlength="19" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                                            </div>
+                                            <div class="month-year-block">
+                                                <label>Expiration date</label>
+                                                <div class="month-year">
+                                                    <div class="month">
+                                                        <input type="number" id="month-input" min="1" max="12" value="09">
+                                                    </div>
+                                                    <div class="year">
+                                                        <input type="number" id="year-input" min="2025" value="2025">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="logo-cards-block">
+                                            <img src="images/visa-logo.webp" alt="logo" />
+                                            <img src="images/mastercard-logo.webp" alt="logo" />
+                                        </div>
+
+                                    </div>
+                                    <div class="cardholder-name-block">
+                                        <label for="cardholder-name-input">Cardholder name</label>
+                                        <input type="text" id="cardholder-name-input">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="button-book">
+                            <button class="book">Book</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

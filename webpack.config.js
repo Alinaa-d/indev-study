@@ -4,9 +4,12 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: './src/script.js',
+  entry: {
+    main: './src/script.js',
+    booking: './src/booking.js', // Добавьте эту строку
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
@@ -50,9 +53,16 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      filename: 'index.html',
+      chunks: ['main'], // Только main.js
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/booking.html',
+      filename: 'booking.html',
+      chunks: ['booking'], // Только booking.js
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.css',
+      filename: '[name].css', // Генерирует отдельные CSS файлы
     }),
     new CopyWebpackPlugin({
       patterns: [
@@ -72,6 +82,12 @@ module.exports = {
   devServer: {
     static: {
       directory: path.join(__dirname, 'public'),
+    },
+    open: {
+      target: ['index.html'],
+    },
+    historyApiFallback: {
+      index: 'index.html',
     },
   },
   mode: 'development',
