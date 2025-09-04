@@ -379,14 +379,14 @@ input[type=time]::-webkit-calendar-picker-indicator {
   justify-content: flex-end;
 }
 
-.card {
+.card-block {
   width: 100%;
   display: flex;
   padding: 0;
   border: none;
 }
 @media (max-width: 420px) {
-  .card {
+  .card-block {
     flex-direction: column;
   }
 }
