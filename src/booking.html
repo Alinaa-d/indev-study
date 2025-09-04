@@ -19,47 +19,49 @@
                     <div class="logo">
                         <img src="images/booking-logo.webp" alt="logo" />
                     </div>
-                    <div class="booking-title">BOOKING TICKETS</div>
-                    <div class="description-title">Tour to Louvre</div>
+                    <h1 class="booking-title">BOOKING TICKETS</h1>
+                    <h2 class="description-title">Tour to Louvre</h2>
                     <hr class="booking-line"/>
                 </div>
-                <form class="personal-data-block">
-                    <div class="date-block">
-                        <div class="date-container">
-                            <input type="date" id="date-input">
-                            <img class="date-icon" for="date-input" src="images/date-icon.webp" alt="icon" />
-                            <img class="date-arrow" for="date-input" src="images/drop-down-arrow.webp" alt="icon" />
+                <form>
+                    <fieldset class="personal-data-block">
+                        <div class="date-block">
+                            <div class="date-container">
+                                <input type="date" id="date">
+                                <img class="date-icon" for="date" src="icons/date-icon.svg" alt="date" />
+                                <img class="date-arrow" for="date" src="icons/drop-down-arrow.svg" alt="date-arrow" />
+                            </div>
+                            <div class="time-container">
+                                <input type="time" id="time">
+                                <img class="date-icon"for="time" src="icons/time-icon.svg" alt="time" />
+                                <img class="date-arrow" for="date" src="icons/drop-down-arrow.svg" alt="time-arrow" />
+                            </div>
                         </div>
-                        <div class="time-container">
-                            <input type="time" id="time-input">
-                            <img class="date-icon"for="time-input" src="images/time-icon.webp" alt="icon" />
-                            <img class="date-arrow" for="date-input" src="images/drop-down-arrow.webp" alt="icon" />
+                        <div class="name-input-container">
+                            <input type="text" id="name" placeholder="Name">
+                            <img for="name" src="icons/name-icon.svg" alt="name" />
                         </div>
-                    </div>
-                    <div class="name-input-container">
-                        <input type="text" id="name-input" placeholder="Name">
-                        <img for="name-input" src="images/name-icon.webp" alt="icon" />
-                    </div>
-                    <div class="email-input-container">
-                        <input type="email" id="email-input" placeholder="E-mail">
-                        <img for="email-input" src="images/email-icon.webp" alt="icon" />
-                    </div>
-                    <div class="phone-input-container">
-                        <input type="tel" id="phone-input" placeholder="Phone">
-                        <img for="phone-input" src="images/phone-icon.webp" alt="icon" />
-                    </div>
-                    <div class="ticket-type-container">
-                        <select id="ticket-type" class="ticket-type-select">
-                            <option value="petersburg">Permanent exhibition</option>
-                            <option value="samara">Temporary exhibition</option>
-                            <option value="perm">Combined Admission</option>
-                        </select>
-                        <img for="ticket-type" src="images/ticket-type-icon.webp" alt="icon" />
-                    </div>
+                        <div class="email-input-container">
+                            <input type="email" id="email" placeholder="E-mail">
+                            <img for="email" src="icons/email-icon.svg" alt="email" />
+                        </div>
+                        <div class="phone-input-container">
+                            <input type="tel" id="phone" placeholder="Phone">
+                            <img for="phone" src="icons/phone-icon.svg" alt="phone" />
+                        </div>
+                        <div class="ticket-type-container">
+                            <select id="ticket-type" class="ticket-type-select">
+                                <option value="petersburg">Permanent exhibition</option>
+                                <option value="samara">Temporary exhibition</option>
+                                <option value="perm">Combined Admission</option>
+                            </select>
+                            <img for="ticket-type" src="icons/ticket-type-icon.svg" alt="ticket-type" />
+                        </div>
+                    </fieldset>
                 </form>
 
-                <div class="entry-ticket-block">
-                    <div class="title-entry-ticket">Entry ticket</div>
+                <fieldset class="entry-ticket-block">
+                    <span class="title-entry-ticket">Entry ticket</span>
                     <hr class="entry-ticket-line"/>
 
                     <div class="amount-control-booking">
@@ -95,7 +97,7 @@
                             <button type="button" class="increment-booking">+</button>
                         </div>
                     </div>
-                </div>
+                </fieldset>
             </div>
             <div class="booking-block2">
                 <div class="overview-block">
@@ -105,15 +107,15 @@
                                 <div class="overview-title">Overview</div>
                                 <div class="description-overview-title">Tour to Louvre</div>
                                 <div class="selected-date-block">
-                                    <img src="images/date-icon.webp" alt="icon" />
+                                    <img src="icons/date-icon.svg" alt="selected-date" />
                                     <label id="select-date"></label>
                                 </div>
                                 <div class="selected-time">
-                                    <img src="images/time-icon.webp" alt="icon" />
+                                    <img src="icons/time-icon.svg" alt="selected-time" />
                                     <label id="select-time"></label>
                                 </div>
                                 <div class="selected-ticket-type">
-                                    <img src="images/selected-ticket-type.webp" alt="icon" />
+                                    <img src="icons/selected-ticket-type.svg" alt="selected-ticket-type" />
                                     <label id="select-ticket-type"></label>
                                 </div>
                             </div>
@@ -139,16 +141,16 @@
                             </div>
                         </div>
 
-                        <div class="card">
+                        <fieldset class="card">
                             <div class="back-card-container">
                                 <div class="back-part">
                                     <div class="black-part"></div>
                                     <div class="cvc-cvv-block">
                                         <div class="cvc-cvv">
-                                            <label for="cvc-input">CVC/CVV</label>
-                                            <input type="text" id="cvc-input" maxlength="4" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                                            <label for="cvc">CVC/CVV</label>
+                                            <input type="text" id="cvc">
                                             <div class="description-text">
-                                                <label class="cvc-description" for="cvc-input">The last
+                                                <label class="cvc-description" for="cvc">The last
                                                     3 or 4 digits
                                                     on back
                                                     of the card</label>
@@ -163,34 +165,34 @@
                                     <div class="top-container">
                                         <div class="data-block">
                                             <div class="card-number">
-                                                <label for="card-number-input">Card number</label>
-                                                <input type="text" id="card-number-input" maxlength="19" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                                                <label for="card-number">Card number</label>
+                                                <input type="text" id="card-number">
                                             </div>
                                             <div class="month-year-block">
                                                 <label>Expiration date</label>
                                                 <div class="month-year">
                                                     <div class="month">
-                                                        <input type="number" id="month-input" min="1" max="12" value="09">
+                                                        <input type="number" id="month" min="1" max="12" value="09">
                                                     </div>
                                                     <div class="year">
-                                                        <input type="number" id="year-input" min="2025" value="2025">
+                                                        <input type="number" id="year" min="2025" value="2025">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="logo-cards-block">
-                                            <img src="images/visa-logo.webp" alt="logo" />
-                                            <img src="images/mastercard-logo.webp" alt="logo" />
+                                            <img src="images/visa-logo.webp" alt="visa-logo" />
+                                            <img src="images/mastercard-logo.webp" alt="mastercard-logo" />
                                         </div>
 
                                     </div>
                                     <div class="cardholder-name-block">
-                                        <label for="cardholder-name-input">Cardholder name</label>
-                                        <input type="text" id="cardholder-name-input">
+                                        <label for="cardholder-name">Cardholder name</label>
+                                        <input type="text" id="cardholder-name">
                                     </div>
                                 </form>
                             </div>
-                        </div>
+                        </fieldset>
                         <div class="button-book">
                             <button class="book">Book</button>
                         </div>

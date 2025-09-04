@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   entry: {
     main: './src/script.js',
-    booking: './src/booking.js', // Добавьте эту строку
+    booking: './src/booking.js',
   },
   output: {
     filename: '[name].bundle.js',
@@ -54,15 +54,15 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
-      chunks: ['main'], // Только main.js
+      chunks: ['main'],
     }),
     new HtmlWebpackPlugin({
       template: './src/booking.html',
       filename: 'booking.html',
-      chunks: ['booking'], // Только booking.js
+      chunks: ['booking'],
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css', // Генерирует отдельные CSS файлы
+      filename: '[name].css',
     }),
     new CopyWebpackPlugin({
       patterns: [

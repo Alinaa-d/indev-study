@@ -88,8 +88,8 @@ document.addEventListener('DOMContentLoaded', function () {
   setupCounterBinding('basic', 'count-basic', 'cost-basic', 20);
   setupCounterBinding('senior', 'count-senior', 'cost-senior', 10);
 
-  setupElementLabelBinding('date-input', 'select-date');
-  setupElementLabelBinding('time-input', 'select-time');
+  setupElementLabelBinding('date', 'select-date');
+  setupElementLabelBinding('time', 'select-time');
   setupElementLabelBinding('ticket-type', 'select-ticket-type');
 
   const basicTickets = localStorage.getItem('basicTickets') || '1';
@@ -112,4 +112,17 @@ document.addEventListener('DOMContentLoaded', function () {
   localStorage.removeItem('seniorTotal');
   localStorage.removeItem('overallTotal');
   localStorage.removeItem('bookingData');
+
+  function setupInputValidation(inputId, maxLength, regexPattern = /[^0-9]/g) {
+    const input = document.getElementById(inputId);
+    if (!input) return;
+
+    input.maxLength = maxLength;
+    input.addEventListener('input', function () {
+      this.value = this.value.replace(regexPattern, '');
+    });
+  }
+
+  setupInputValidation('cvc', 4);
+  setupInputValidation('card-number', 19);
 });
