@@ -6,11 +6,12 @@
 @font-face {
   font-family: Forum;
   src: url("fonts/Forum-Regular.ttf");
+  font-weight: 400;
 }
 :root {
-  --btn-background: #710707;
-  --btn-hover-background: #d2b183;
-  --text-background: #9d8665;
+  --dark-red: #710707;
+  --font-gold: #9d8665;
+  --font-gold-hover: #d2b183;
 }
 
 * {
@@ -165,7 +166,7 @@ body {
   }
 }
 
-.nav-container > ul {
+.main-nav-list {
   padding-left: 50%;
   margin: 0;
   display: flex;
@@ -173,7 +174,7 @@ body {
   gap: 25px;
 }
 @media (max-width: 1024px) {
-  .nav-container > ul {
+  .main-nav-list {
     flex-direction: column;
     gap: 5px;
     margin-left: 20px;
@@ -181,7 +182,7 @@ body {
   }
 }
 @media (max-width: 768px) {
-  .nav-container > ul {
+  .main-nav-list {
     margin-left: 45px;
     gap: 25px;
     margin-bottom: 20px;
@@ -189,28 +190,28 @@ body {
   }
 }
 @media (max-width: 420px) {
-  .nav-container > ul {
+  .main-nav-list {
     margin-left: 35px;
     padding-top: 25px;
   }
 }
 
-.main-nav li {
+.main-nav-item {
   margin: 0;
   list-style-type: none;
 }
 @media (max-width: 768px) {
-  .main-nav li {
+  .main-nav-item {
     font-size: 22px;
   }
 }
 @media (max-width: 420px) {
-  .main-nav li {
+  .main-nav-item {
     margin-top: 6px;
   }
 }
 
-.main-nav a {
+.main-nav-link {
   color: white;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
@@ -221,14 +222,14 @@ body {
   display: flex;
 }
 @media (max-width: 1024px) {
-  .main-nav a {
+  .main-nav-link {
     margin: 15px 0;
     list-style: none;
     font-size: 24px;
   }
 }
 @media (max-width: 769px) {
-  .main-nav a {
+  .main-nav-link {
     font-size: 22px;
     margin: 0px;
   }
@@ -364,7 +365,7 @@ body {
 .discover-btn {
   border: none;
   border-radius: 10px;
-  background-color: var(--btn-background);
+  background-color: var(--dark-red);
   color: #fff;
   width: 320px;
   height: 56px;
@@ -390,7 +391,7 @@ body {
 }
 
 .discover-btn:hover {
-  background-color: var(--text-background);
+  background-color: var(--font-gold);
 }
 
 .swiper-container {
@@ -562,7 +563,7 @@ body {
 }
 
 .swiper-carousel-dot.active {
-  background-color: var(--btn-hover-background);
+  background-color: var(--font-gold-hover);
   transform: scale(1.1);
 }
 
@@ -635,7 +636,7 @@ body {
   letter-spacing: 5px;
   padding-left: 160px;
   padding-top: 50px;
-  color: var(--text-background);
+  color: var(--font-gold);
 }
 @media (max-width: 1024px) {
   .title {
@@ -656,7 +657,7 @@ body {
 }
 
 .line {
-  border-bottom: 2px solid var(--btn-background);
+  border-bottom: 2px solid var(--dark-red);
   margin-left: 160px;
   margin-top: 20px;
   width: calc(100% - 300px);
@@ -789,7 +790,7 @@ body {
 }
 
 .variant-line {
-  border-bottom: 2px solid var(--btn-background);
+  border-bottom: 2px solid var(--dark-red);
   width: 80%;
   display: flex;
   position: relative;
@@ -865,7 +866,7 @@ body {
 }
 
 .pic-ex-line {
-  border-bottom: 2px solid var(--btn-background);
+  border-bottom: 2px solid var(--dark-red);
   width: 85%;
   margin: 0;
   padding: 0;
@@ -907,7 +908,7 @@ body {
 }
 
 .text-pic-ex p span {
-  color: var(--text-background);
+  color: var(--font-gold);
 }
 
 .slider-container {
@@ -1005,7 +1006,7 @@ body {
   font-family: Forum;
   letter-spacing: 5px;
   padding-top: 50px;
-  color: var(--text-background);
+  color: var(--font-gold);
   width: 45%;
 }
 @media (max-width: 1024px) {
@@ -1142,7 +1143,7 @@ body {
 }
 
 .slider-arrow:hover {
-  color: var(--btn-background);
+  color: var(--dark-red);
 }
 
 .slider-carousel {
@@ -1171,7 +1172,7 @@ body {
 }
 
 .slider-carousel-dot.active:hover {
-  background-color: var(--btn-background);
+  background-color: var(--dark-red);
 }
 
 /*5 блок*/
@@ -1280,7 +1281,7 @@ body {
   font-family: Forum;
   letter-spacing: 5px;
   padding-top: 50px;
-  color: var(--text-background);
+  color: var(--font-gold);
   width: 100%;
 }
 @media (max-width: 1024px) {
@@ -1301,7 +1302,7 @@ body {
 
 .buy-tickets-line {
   border: transparent;
-  border-bottom: 2px solid var(--btn-background);
+  border-bottom: 2px solid var(--dark-red);
   width: 100%;
   padding-top: 10px;
 }
@@ -1695,7 +1696,7 @@ input[type=number]::-webkit-inner-spin-button {
   font-family: Forum;
   letter-spacing: 5px;
   padding-top: 50px;
-  color: var(--text-background);
+  color: var(--font-gold);
   width: 100%;
 }
 @media (max-width: 1024px) {
@@ -1716,7 +1717,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .contacts-line {
   border: transparent;
-  border-bottom: 2px solid var(--btn-background);
+  border-bottom: 2px solid var(--dark-red);
   width: 100%;
   padding-top: 10px;
 }
@@ -1821,25 +1822,25 @@ input[type=number]::-webkit-inner-spin-button {
   opacity: 60%;
 }
 
-.logo-footer-block img {
+.footer-logo {
   width: 42px;
   height: 20px;
   margin-right: 20px;
 }
 @media (max-width: 1024px) {
-  .logo-footer-block img {
+  .footer-logo {
     width: 40px;
     height: 22px;
   }
 }
 @media (max-width: 768px) {
-  .logo-footer-block img {
+  .footer-logo {
     width: 36px;
     height: 18px;
   }
 }
 @media (max-width: 420px) {
-  .logo-footer-block img {
+  .footer-logo {
     width: 34px;
   }
 }
@@ -1865,7 +1866,7 @@ input[type=number]::-webkit-inner-spin-button {
   color: white;
 }
 
-.sections-block ul {
+.sections-block-list {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(2, 1fr);
@@ -1874,18 +1875,18 @@ input[type=number]::-webkit-inner-spin-button {
   margin: 0px;
 }
 @media (max-width: 420px) {
-  .sections-block ul {
+  .sections-block-list {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
   }
 }
 
-.sections-block ul li {
+.sections-block-item {
   list-style: none;
 }
 
-.sections-block ul li a {
+.sections-block-link {
   color: white;
   text-decoration: none;
   font-family: "Roboto", sans-serif;

@@ -1,23 +1,9 @@
-@font-face {
-  font-family: Roboto;
-  src: url('fonts/Roboto.ttf');
-}
+@import "general.scss";
 
-@font-face {
-  font-family: Forum;
-  src: url('fonts/Forum-Regular.ttf');
-  font-weight: 400;
-}
-
-:root {
-  --dark-red: #710707;
-  --font-gold: #9d8665;
-}
-
-.exit{
+.exit-icon{
   display: flex;
   justify-content: end;
-  padding: 30px 30px;
+  padding: 30px;
 }
 
 .booking-wrapper{
@@ -46,9 +32,9 @@
   flex-direction: column;
 }
 
-.booking-block1{
+.booking-form-section{
   display: flex;
-  width: 44%;
+  width: 45%;
   flex-direction: column;
 
   @media (max-width: 768px) {
@@ -56,9 +42,9 @@
   }
 }
 
-.booking-block2{
+.booking-overview{
   display: flex;
-  width: 56%;
+  width: 55%;
   flex-direction: column;
 
   @media (max-width: 768px) {
@@ -87,7 +73,7 @@
   }
 }
 
-.description-title{
+.booking-subtitle{
   font-size: 18px;
   font-family: Roboto;
   font-weight: 400;
@@ -125,14 +111,14 @@
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 0%;
+  opacity: 0;
 }
 
 input[type="time"]::-webkit-calendar-picker-indicator {
-  opacity: 0%;
+  opacity: 0;
 }
 
-.name-input-container, .email-input-container, .phone-input-container, .ticket-type-container {
+.input-container {
   position: relative;
   width: 100%;
 
@@ -146,7 +132,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   }
 }
 
-.date-container, .time-container{
+.date-container{
   position: relative;
   width: 100%;
 }
@@ -171,7 +157,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   height: 16px;
 }
 
-#name, #email, #phone, #ticket, #date, #time, #ticket-type{
+.input-field{
   height: 45px;
   font-size: 18px;
   font-family: Roboto;
@@ -189,7 +175,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   margin-top: 20px;
 }
 
-.title-entry-ticket{
+.entry-ticket-title{
   font-size: 18px;
   font-family: Forum;
   color: var(--font-gold);

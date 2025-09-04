@@ -1,26 +1,6 @@
 require('./booking.scss');
 
 document.addEventListener('DOMContentLoaded', function () {
-  document.addEventListener('click', function (e) {
-    if (e.target.classList.contains('increment-booking')) {
-      const input = e.target.previousElementSibling;
-      if (input && input.type === 'number') {
-        input.value = (parseInt(input.value) || 0) + 1;
-      }
-    }
-
-    if (e.target.classList.contains('decrement-booking')) {
-      const input = e.target.nextElementSibling;
-      if (input && input.type === 'number') {
-        const value = parseInt(input.value) || 0;
-        const min = parseInt(input.getAttribute('min')) || 0;
-        if (value > min) {
-          input.value = value - 1;
-        }
-      }
-    }
-  });
-
   function setupElementLabelBinding(elementId, labelId) {
     const element = document.getElementById(elementId);
     const label = document.getElementById(labelId);
@@ -72,15 +52,30 @@ document.addEventListener('DOMContentLoaded', function () {
       attributeFilter: ['value'],
     });
 
+    input.addEventListener('change', updateLabels);
+    input.addEventListener('input', updateLabels);
+
     const decrementBtn = input.previousElementSibling;
     const incrementBtn = input.nextElementSibling;
 
-    const handleButtonClick = () => {
-      setTimeout(updateLabels, 0);
-    };
+    if (decrementBtn) {
+      decrementBtn.addEventListener('click', () => {
+        const currentValue = parseInt(input.value) || 0;
+        const min = parseInt(input.getAttribute('min')) || 0;
+        if (currentValue > min) {
+          input.value = currentValue - 1;
+          updateLabels();
+        }
+      });
+    }
 
-    if (decrementBtn) decrementBtn.addEventListener('click', handleButtonClick);
-    if (incrementBtn) incrementBtn.addEventListener('click', handleButtonClick);
+    if (incrementBtn) {
+      incrementBtn.addEventListener('click', () => {
+        const currentValue = parseInt(input.value) || 0;
+        input.value = currentValue + 1;
+        updateLabels();
+      });
+    }
 
     updateLabels();
   }
